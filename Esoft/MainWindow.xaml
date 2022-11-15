@@ -1,0 +1,58 @@
+﻿<Window x:Class="esoft.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:esoft"
+        mc:Ignorable="d"
+        Title="Esoft" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="569*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="#263238" Grid.Column="0">
+            <StackPanel>
+                <Grid  Height="50" Background="#263238">
+                    <Image Source="D:\Desktop\history\icons\icno.png" />
+                </Grid>
+                <ListView Margin="0 15 0 0" FontFamily="Century Gothic"  FontSize="15" Foreground="White" BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Stretch">
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="D:\Desktop\icons\clients.png" Height="25" VerticalAlignment="Center"></Image>
+                            <Button  Background="#263238" x:Name="BtnAgent" Content="Агенты"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="BtnAgent_Click"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="D:\Desktop\icons\agenti.png" Height="25" VerticalAlignment="Center"></Image>
+                            <Button  Background="#263238" x:Name="BtnClient" Content="Клиенты" HorizontalAlignment="Center" VerticalAlignment="Top" Click="BtnClient_Click"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="D:\Desktop\icons\sdelka.png" Height="25" VerticalAlignment="Center"></Image>
+                            <Button  Background="#263238" x:Name="BtnDeals" Content="Сделки" HorizontalAlignment="Center" VerticalAlignment="Top" Click="BtnDeals_Click"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="D:\Desktop\icons\trebovanie.png" Height="25" VerticalAlignment="Center"></Image>
+                            <Button  Background="#263238" x:Name="BtnDemands" Content="Требования"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="BtnDemands_Click"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="D:\Desktop\icons\posawshiki.png" Height="25" VerticalAlignment="Center"></Image>
+                        <Button  Background="#263238" x:Name="BtnSupplier" Content="Поставщики" HorizontalAlignment="Center" VerticalAlignment="Top" Click="BtnSupplier_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Visibility="Hidden" Background="#263238" x:Name="BtnBack" HorizontalAlignment="Center" Content="Назад" VerticalAlignment="Top" Click="BtnBack_Click"/>
+                    </StackPanel>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <Frame ContentRendered="MainFrame_ContentRendered"  x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        <Frame NavigationUIVisibility="Hidden" Grid.Column="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
